@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loss Functions in Machine Learning</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Loss Functions in Machine Learning</h1>
+
+  <div class="section">
+    <h2 class="section-title">Mean Squared Error (MSE)</h2>
+    <p>The Mean Squared Error calculates the average squared difference between the predicted and actual values.</p>
+	<ul>
+		<li>Mean Squared Error calculates the average squared difference between the predicted and actual values.</li>
+		<li>It is commonly used as a loss function for regression problems.</li>
+		<li>MSE penalizes large errors more heavily than small errors, as it squares the differences.</li>
+		<li>The formula for MSE is: MSE = (1/n) * Σ(y - y_pred)^2, where y is the actual value, y_pred is the predicted value, and n is the number of samples.</li>
+	</ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Binary Cross Entropy</h2>
+    <p>Binary Cross Entropy is commonly used for binary classification problems. It measures the dissimilarity between the predicted and true labels.</p>
+	<ul>
+		<li>Binary Cross Entropy is commonly used for binary classification problems.</li>
+		<li>It measures the dissimilarity between the predicted and true labels.</li>
+		<li>The predicted values are typically passed through a sigmoid activation function to ensure they are within the range of [0, 1].</li>
+		<li>The formula for Binary Cross Entropy is: BCE = -[y * log(y_pred) + (1 - y) * log(1 - y_pred)], where y is the true label and y_pred is the predicted probability.</li>
+	</ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Categorical Cross Entropy</h2>
+    <p>Categorical Cross Entropy is used for multi-class classification problems. It calculates the dissimilarity between the predicted and true class probabilities.</p>
+	<ul>
+		<li>Categorical Cross Entropy is used for multi-class classification problems.</li>
+		<li>It calculates the dissimilarity between the predicted and true class probabilities.</li>
+		<li>The predicted class probabilities are typically passed through a softmax activation function to ensure they sum up to 1.</li>
+		<li>The formula for Categorical Cross Entropy is: CCE = -Σ(y * log(y_pred)), where y is the true class probability vector and y_pred is the predicted class probability vector.</li>
+	</ul>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Hinge Loss</h2>
+    <p>Hinge Loss is often used in support vector machines (SVMs) and is suitable for classification problems. It aims to maximize the margin between classes.</p>
+	<ul>
+		<li>Hinge Loss is often used in support vector machines (SVMs) and is suitable for classification problems.</li>
+		<li>It aims to maximize the margin between classes.</li>
+		<li>Hinge Loss only penalizes predictions that are close to the decision boundary, ignoring predictions that are sufficiently far from the boundary.</li>
+		<li>The formula for Hinge Loss is: Hinge Loss = Σ(max(0, 1 - y * y_pred)), where y is the true label (-1 or 1) and y_pred is the predicted value.</li>
+	</ul>  
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Kullback-Leibler Divergence</h2>
+    <p>Kullback-Leibler Divergence measures the difference between two probability distributions. It is commonly used in tasks such as clustering and generative models.</p>
+	<ul>
+		<li>Kullback-Leibler Divergence measures the difference between two probability distributions.</li>
+		<li>It is commonly used in tasks such as clustering and generative models.</li>
+		<li>KL Divergence quantifies how much one distribution diverges from another.</li>
+		<li>The formula for KL Divergence is: KL(P || Q) = Σ(P(x) * log(P(x) / Q(x))), where P and Q are the two probability distributions.</li>
+	</ul>  
+  </div>
+  <p>These loss functions serve different purposes and are used in various machine learning algorithms based on the nature of the problem and the desired objective.</p>
+</body>
+</html>
