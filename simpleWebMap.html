@@ -1,0 +1,26 @@
+<head>
+    <!-- Load the leaflet library from a CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.2/chroma.min.js"></script>
+    <!-- Set the style of the map container -->
+    <style>
+        #map {
+            height: 80vmin;
+            width: 80vw;
+        }
+
+    </style>
+</head>
+<body>
+	<div><h1>Countries</h1></div>
+	<input type="range" id="timeSlider" min="1950" max="2022" step="1" value = "1950">
+	<div id = "title-container"></div>
+	<button id="playPauseButton">Play</button>
+    <!-- Create a div element to hold the map -->
+    <div style = "display: relative;" id="map">
+	</div>
+    <!-- Load the javascript code from a separate file -->
+  <div><script src="simpleWebMap.js"></script></div>
+  <div>Contact me at: Linkedin </div>
+</body>
